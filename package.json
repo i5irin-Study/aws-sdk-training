@@ -1,0 +1,19 @@
+{
+  "name": "aws-sdk-training",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/i5irin-Study/aws-sdk-training.git"
+  },
+  "author": "i5irin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5irin-Study/aws-sdk-training/issues"
+  },
+  "homepage": "https://github.com/i5irin-Study/aws-sdk-training#readme"
+}
