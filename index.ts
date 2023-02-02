@@ -1,4 +1,4 @@
-import { CloudFormationClient, CreateStackCommand } from "@aws-sdk/client-cloudformation";
+import { CloudFormationClient, CreateStackCommand, waitUntilStackCreateComplete } from "@aws-sdk/client-cloudformation";
 
 const main = async () => {
   const client = new CloudFormationClient({
@@ -33,6 +33,14 @@ const main = async () => {
   try {
     const data = await client.send(createStack);
     console.log(data);
+    
+    const result = await waitUntilStackCreateComplete({
+      client,
+      maxWaitTime: 900,
+    }, {
+      StackName: process.env.STACK_NAME,
+    });
+    console.log(result);
   } catch (e) {
     console.error(e);
   }
